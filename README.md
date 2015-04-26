@@ -47,9 +47,9 @@ It can also be used in conjunction with [Picasso][1]!
 
  * `multiplier` Enhance the image movement (**default value is 3**)
  
-  Don't forget that, in order to use the attributes in layout mode, you need to add a custom namespace, e.g.:
+Don't forget that, in order to use the attributes in layout mode, you need to add a custom namespace, e.g.:
   
-		xmlns:motus="http://schemas.android.com/apk/cv.com.spencer.motus"
+	xmlns:motus="http://schemas.android.com/apk/cv.com.spencer.motus"
 
 ### Warning
 
