@@ -14,26 +14,48 @@ It can also be used in conjunction with [Picasso][1]!
 
 *For the source code see the `motus/` folder.*
 
-  You can use the widget through the layout by declaring it as follows:
+#### Gradle
+
+  Modify the `build.gradle` file present in the root of your project so it looks like the following:
+  
+	allprojects {
+		repositories {
+			// other repositories
+			mavenCentral()
+			maven {
+				url 'https://oss.sonatype.org/content/groups/public'
+			}
+		}
+	}
+	
+  Modify the `build.gradle` at module level, and add the following dependency:
+  
+	compile 'cv.com.spencer:motus:1.0-SNAPSHOT'
+
+  Finally, you can use the widget through the layout:
   
 	<cv.com.spencer.motus.MotusImageView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:src="@drawable/plate_blurred" />
+		
+  Or code:
+  
+	MotusImageView view = (MotusImageView) rootView.findViewById(R.id.view_id);
 
 # Customization
 
  * `multiplier` Enhance the image movement (**default value is 3**)
-		 
+ 
+  Don't forget that, in order to use the attributes in layout mode, you need to add a custom namespace, e.g.:
+  
+		xmlns:motus="http://schemas.android.com/apk/cv.com.spencer.motus"
+
 ### Warning
 
   Note that this library was created in order to apply a slight movement to the background image.
   However, since you can set any value to the **`multiplier`** attribute, if you set it too high and
   your image is not that big, the content of the image might get rendered completely off screen.
-
-### TODO
-
-  Make this library available through [Gradle][2].
   
 # Developed By
 
@@ -56,4 +78,3 @@ It can also be used in conjunction with [Picasso][1]!
 	limitations under the License.
 
 [1]: https://github.com/square/picasso
-[2]: https://gradle.org/
