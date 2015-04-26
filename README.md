@@ -16,7 +16,7 @@ It can also be used in conjunction with [Picasso][1]!
 
   You can use the widget through the layout by declaring it as follows:
   
-	<cv.com.spencer.android.motus.MotusImageView
+	<cv.com.spencer.motus.MotusImageView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		android:src="@drawable/plate_blurred" />
