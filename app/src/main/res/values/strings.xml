@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Motus Demo</string>
+    <string name="explanation">Move device around its axis\nto see the effect</string>
 </resources>
